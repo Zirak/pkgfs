@@ -83,7 +83,6 @@ zsh-5.0.8 -> /usr/bin/zsh-5.0.8
 2. `outdated/` directory: Spec it. Some suggestions below. To decide which is the better way, some research is needed to find out whether upgrading a package is the same as installing the new version, cross package manager. Anyway, suggestions:
 	1. Symlinks to `/pkg/index`
 	2. Directory with two symlinks, one to the installed package and the other to the index, with an executable to upgrade.
-3. `search/` directory: Spec it, and figure out what should it search (the index? installed? both? how can the user tell which should be searched?)
 
 ### Installed directory
 1. When uninstalling a package, should we also remove the to-be orphaned packages it depended on? That is, if `libfoo` was installed purely as a dependency of `foobin` and we uninstall `foobin`, should `libfoo` also be uninstalled? Is this opt-out or opt-in? How does the user decide?
