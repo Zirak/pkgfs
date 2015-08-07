@@ -83,11 +83,10 @@ zsh-5.0.8 -> /usr/bin/zsh-5.0.8
 2. `outdated/` directory: Spec it. Some suggestions below. To decide which is the better way, some research is needed to find out whether upgrading a package is the same as installing the new version, cross package manager. Anyway, suggestions:
 	1. Symlinks to `/pkg/index`
 	2. Directory with two symlinks, one to the installed package and the other to the index, with an executable to upgrade.
+3. `orphans/` directory: Spec it. How should it look like? Should it contain a `clean-orphans` script? Possible name clashes an iteration problems?
 
 ### Installed directory
-1. When uninstalling a package, should we also remove the to-be orphaned packages it depended on? That is, if `libfoo` was installed purely as a dependency of `foobin` and we uninstall `foobin`, should `libfoo` also be uninstalled? Is this opt-out or opt-in? How does the user decide?
-	1. As a sub-issue, how do we deal with orphaned packages? Too much of an edge case to be handled by the user explicitly, or maybe a different directory under `/pkg`?
-2. Find out if `files/` can be implemented across all package managers.
+1. Find out if `files/` can be implemented across all package managers.
 
 ## Implementations
 * [dpkg-fs](https://github.com/ralt/dpkg-fs) for Debian (apt/dpkg).
