@@ -89,10 +89,6 @@ zsh-5.0.8 -> /usr/bin/zsh-5.0.8
 	1. As a sub-issue, how do we deal with orphaned packages? Too much of an edge case to be handled by the user explicitly, or maybe a different directory under `/pkg`?
 2. Find out if `files/` can be implemented across all package managers.
 
-### Assorted pains in the side
-1. Do we need to handle cases where the same package is named differently in different repos? For instance, it's `foobin` in Debian Stable, but `foo-bin` in the Centos6 repos.
-	1. On the one hand it'd be pretty cool, on the other it's a never-ending rabbit hole where we can't cover 100% of cases.
-
 ## Implementations
 * [dpkg-fs](https://github.com/ralt/dpkg-fs) for Debian (apt/dpkg).
 * [pacman-fs](https://github.com/Zirak/pacman-fs) for Arch (pacman/alpm).
