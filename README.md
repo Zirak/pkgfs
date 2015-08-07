@@ -41,6 +41,8 @@ Files and directories found only under `/pkg/index/[name]`
 
 * `install`
 Executable which installs the package.
+Flags:
+    * `-y`, `--yes` - Automatic "yes" to prompts, unless asked a potentially destructive question (like conflict resolution).
 
 ### Installed package files and directories
 Files and directories found only under `/pkg/installed/[name]`
